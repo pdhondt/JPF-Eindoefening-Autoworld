@@ -8,7 +8,7 @@ public enum Maat {
         this.factor = factor;
     }
 
-    public double getWaardeInMeter(int waarde) {
-        return waarde * factor;
+    public double getFactor() {
+        return factor;
     }
 }

@@ -13,7 +13,7 @@ public record Volume(int breedte, int hoogte, int diepte, Maat maat) implements 
     }
 
     public double getVolume() {
-        return maat.getWaardeInMeter(breedte) * maat.getWaardeInMeter(hoogte) * maat.getWaardeInMeter(diepte);
+        return (breedte * hoogte * diepte) * maat.getFactor();
     }
 
     @Override
