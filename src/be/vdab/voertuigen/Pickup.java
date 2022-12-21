@@ -15,7 +15,6 @@ public class Pickup extends Personenwagen implements Laadbaar {
         setLaadvolume(laadvolume);
     }
 
-
     @Override
     public Volume getLaadvolume() {
         return laadvolume;
