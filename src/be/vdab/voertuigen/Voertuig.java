@@ -7,7 +7,7 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class Voertuig implements Comparable<Voertuig>, Serializable {
+public abstract class Voertuig implements Comparable<Voertuig>, Serializable {
     private final Nummerplaat nummerplaat; // = Div.INSTANCE.getNummerplaat();
     private String merk;
     private int aankoopprijs;
@@ -28,7 +28,7 @@ public class Voertuig implements Comparable<Voertuig>, Serializable {
         return merk;
     }
 
-    public void setMerk(String merk) {
+    public final void setMerk(String merk) {
         if (merk == null || merk.isEmpty()) {
             throw new IllegalArgumentException("merk moet ingevuld zijn");
         } else {
@@ -40,7 +40,7 @@ public class Voertuig implements Comparable<Voertuig>, Serializable {
         return aankoopprijs;
     }
 
-    public void setAankoopprijs(int aankoopprijs) {
+    public final void setAankoopprijs(int aankoopprijs) {
         if (aankoopprijs < 0) {
             throw new IllegalArgumentException("aankoopprijs mag niet negatief zijn");
         } else {
